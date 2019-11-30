@@ -1,12 +1,9 @@
 package me.mickgian.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.FragmentNavigator
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import me.mickgian.common.base.BaseFragment
 import me.mickgian.common.base.BaseViewModel
 import me.mickgian.home.databinding.FragmentHomeBinding

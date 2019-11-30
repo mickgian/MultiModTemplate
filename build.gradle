@@ -26,6 +26,12 @@ allprojects {
     }
 }
 
+ext {
+    // Test Maven Library Info
+    libVersionCode = 1
+    libVersionName = '1.0.0'
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
