@@ -8,4 +8,11 @@
         <item name="android:windowContentTransitions">true</item>
     </style>
 
+    <!-- Specific style for supporting fullscreen DialogFragment  -->
+    <style name="ModalFullscreenDialog" parent="Theme.AppCompat.Light" >
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
 </resources>
