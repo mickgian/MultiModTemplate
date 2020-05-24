@@ -11,7 +11,7 @@ import me.mickgian.model.User
 
 @Database(entities = [User::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
-abstract class ArchAppDatabase: RoomDatabase() {
+abstract class MultiModDatabase: RoomDatabase() {
 
     // DAO
     abstract fun userDao(): UserDao
@@ -19,7 +19,7 @@ abstract class ArchAppDatabase: RoomDatabase() {
     companion object {
 
         fun buildDatabase(context: Context) =
-            Room.databaseBuilder(context.applicationContext, ArchAppDatabase::class.java, "ArchApp.db")
+            Room.databaseBuilder(context.applicationContext, MultiModDatabase::class.java, "MultiMod.db")
                 .build()
     }
 }

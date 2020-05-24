@@ -3,46 +3,46 @@ package me.mickgian.local.base
 import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import me.mickgian.local.ArchAppDatabase
+import me.mickgian.local.MultiModDatabase
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.runner.RunWith
-import org.koin.dsl.module.module
-import org.koin.standalone.StandAloneContext
-import org.koin.standalone.inject
+import org.koin.core.context.loadKoinModules
+import org.koin.core.context.stopKoin
+import org.koin.dsl.module
 import org.koin.test.KoinTest
+import org.koin.test.inject
+
 
 private const val DATABASE = "DATABASE"
 @RunWith(AndroidJUnit4::class)
 abstract class BaseTest: KoinTest {
 
     @Rule @JvmField val instantExecutorRule = InstantTaskExecutorRule()
-    protected val database: ArchAppDatabase by inject()
+    protected val database: MultiModDatabase by inject()
 
     @Before
     open fun setUp(){
-        this.configureDi()
+        loadKoinModules(listOf(getLocalModuleTest()))
     }
 
     @After
     open fun tearDown() {
-        StandAloneContext.stopKoin()
+        database.close()
+        stopKoin()
     }
 
-    // CONFIGURATION
-    private fun configureDi(){
-        StandAloneContext.startKoin(listOf(configureLocalModuleTest(ApplicationProvider.getApplicationContext<Context>())))
-    }
-
-    private fun configureLocalModuleTest(context: Context) = module {
-        single(DATABASE) {
-            Room.inMemoryDatabaseBuilder(context, ArchAppDatabase::class.java)
+    private fun getLocalModuleTest() = module(override = true) {
+        single {
+            Room.inMemoryDatabaseBuilder(
+                get(),
+                MultiModDatabase::class.java
+            )
                 .allowMainThreadQueries()
                 .build()
         }
-        factory { (get(DATABASE) as ArchAppDatabase).userDao() }
+        factory { get<MultiModDatabase>().userDao() }
     }
 }

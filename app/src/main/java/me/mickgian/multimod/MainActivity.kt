@@ -1,4 +1,4 @@
-package me.mickgian.easyestate
+package me.mickgian.multimod
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

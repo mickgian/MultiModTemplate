@@ -3,25 +3,25 @@
   "incomplete_results": false,
   "items": [
     {
-      "login": "PhilippeBoisney",
-      "id": 6847959,
-      "node_id": "MDQ6VXNlcjY4NDc5NTk=",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/6847959?v=4",
+      "login": "",
+      "id": ,
+      "node_id": "",
+      "avatar_url": "",
       "gravatar_id": "",
-      "url": "https://api.github.com/users/PhilippeBoisney",
-      "html_url": "https://github.com/PhilippeBoisney",
-      "followers_url": "https://api.github.com/users/PhilippeBoisney/followers",
-      "following_url": "https://api.github.com/users/PhilippeBoisney/following{/other_user}",
-      "gists_url": "https://api.github.com/users/PhilippeBoisney/gists{/gist_id}",
-      "starred_url": "https://api.github.com/users/PhilippeBoisney/starred{/owner}{/repo}",
-      "subscriptions_url": "https://api.github.com/users/PhilippeBoisney/subscriptions",
-      "organizations_url": "https://api.github.com/users/PhilippeBoisney/orgs",
-      "repos_url": "https://api.github.com/users/PhilippeBoisney/repos",
-      "events_url": "https://api.github.com/users/PhilippeBoisney/events{/privacy}",
-      "received_events_url": "https://api.github.com/users/PhilippeBoisney/received_events",
-      "type": "User",
+      "url": "",
+      "html_url": "",
+      "followers_url": "",
+      "following_url": "",
+      "gists_url": "",
+      "starred_url": "",
+      "subscriptions_url": "",
+      "organizations_url": "",
+      "repos_url": "",
+      "events_url": "",
+      "received_events_url": "",
+      "type": "",
       "site_admin": false,
-      "score": 107.831085
+      "score": 0
     }
   ]
 }

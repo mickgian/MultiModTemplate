@@ -1,5 +1,5 @@
 object ApplicationId {
-    val id = "me.mickgian.easyestate"
+    val id = "me.mickgian.multimod"
 }
 
 object Modules {
@@ -25,30 +25,30 @@ object Releases {
 }
 
 object Versions {
-    val kotlin = "1.3.21"
-    val gradle = "3.3.2"
-    val compileSdk = 28
+    val kotlin = "1.3.71"
+    val gradle = "3.4.2"
+    val compileSdk = 29
     val minSdk = 23
-    val targetSdk = 28
-    val appCompat = "1.1.0-alpha04"
-    val coreKtx = "1.1.0-alpha04"
-    val constraintLayout = "1.1.3"
+    val targetSdk = 29
+    val appCompat = "1.1.0"
+    val coreKtx = "1.2.0"
+    val constraintLayout = "2.0.0-beta6"
     val junit = "4.12"
     val androidTestRunner = "1.1.2-alpha02"
     val espressoCore = "3.2.0-alpha02"
-    val retrofit = "2.5.0"
+    val retrofit = "2.6.0"
     val retrofitCoroutines = "0.9.2"
-    val retrofitGson = "2.4.0"
+    val retrofitGson = "2.5.0"
     val gson = "2.8.5"
     val okHttp = "3.12.1"
-    val coroutines = "1.1.1"
-    val koin = "1.0.2"
+    val coroutines = "1.3.6"
+    val koin = "2.1.5"
     val timber = "4.7.1"
-    val lifecycle = "2.1.0-alpha04"
-    val nav = "2.0.0"
+    val lifecycle = "2.2.0"
+    val nav = "2.2.2"
     val room = "2.1.0-alpha06"
-    val recyclerview = "1.0.0"
-    val safeArgs = "2.1.0-alpha01"
+    val recyclerview = "1.1.0"
+    val safeArgs = "2.2.2"
     val glide = "4.9.0"
     val mockwebserver = "2.7.5"
     val archCoreTest = "2.0.0"
@@ -89,7 +89,9 @@ object AndroidLibraries {
     val coreKtx = "androidx.core:core-ktx:${Versions.coreKtx}"
     val constraintLayout = "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}"
     val lifecycleViewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
-    val lifecycleExtensions = "androidx.lifecycle:lifecycle-extensions:${Versions.lifecycle}"
+    val liveData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"
+    val lifecycleService = "androidx.lifecycle:lifecycle-service:${Versions.lifecycle}"
+    val lifecycleProcess = "androidx.lifecycle:lifecycle-process:${Versions.lifecycle}"
     val recyclerView = "androidx.recyclerview:recyclerview:${Versions.recyclerview}"
     val navigation = "androidx.navigation:navigation-ui-ktx:${Versions.nav}"
     val navigationFrag = "androidx.navigation:navigation-fragment-ktx:${Versions.nav}"

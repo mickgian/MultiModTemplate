@@ -7,7 +7,7 @@
     <!-- HOME FRAGMENT -->
     <fragment android:id="@+id/homeFragment"
               android:name="me.mickgian.home.HomeFragment"
-              android:label="EasyEstate">
+              android:label="MultiMod">
 
         <!-- Go to Detail Fragment (Its graph is responsible to handle response) -->
         <action android:id="@+id/action_homeFragment_to_detailFragment"

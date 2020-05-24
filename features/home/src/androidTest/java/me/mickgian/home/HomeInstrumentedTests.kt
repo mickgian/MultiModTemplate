@@ -30,9 +30,11 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.koin.dsl.module.module
-import org.koin.standalone.StandAloneContext.loadKoinModules
-import org.koin.standalone.StandAloneContext.stopKoin
+import org.koin.core.context.loadKoinModules
+import org.koin.core.context.stopKoin
+import org.koin.dsl.module
+//import org.koin.standalone.StandAloneContext.loadKoinModules
+//import org.koin.standalone.StandAloneContext.stopKoin
 import org.koin.test.KoinTest
 import java.lang.Exception
 
@@ -44,7 +46,7 @@ class HomeInstrumentedTests: KoinTest {
 
     @Before
     fun setUp(){
-        loadKoinModules(featureHomeModule, module {
+        loadKoinModules( module {
             factory { AppDispatchers(Dispatchers.Main, Dispatchers.Main) }
             factory { userRepository }
         })
